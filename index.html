@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <link rel="icon" type="image/png" href="sfo-01/index.png?v=2">
+
+        <style>
+            :root {
+                --background: #080808;
+                --surface-line: #303030;
+                --text: #eeeeee;
+                --muted: #999999;
+                --accent: #ffffff;
+                --link: #c9c9c9;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                position: relative;
+                min-height: 100vh;
+                margin: 0;
+                background: #080808;
+                color: var(--text);
+                font-family: Georgia, serif;
+                font-size: 17px;
+                line-height: 1.5;
+                overflow-x: hidden;
+            }
+
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            #starfield {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            body::before {
+                background-image:
+                    radial-gradient(0.8px 0.8px at 4% 12%, rgba(255,255,255,0.42), transparent),
+                    radial-gradient(1px 1px at 11% 36%, rgba(255,255,255,0.55), transparent),
+                    radial-gradient(0.7px 0.7px at 18% 78%, rgba(255,255,255,0.38), transparent),
+                    radial-gradient(1.2px 1.2px at 27% 21%, rgba(255,255,255,0.68), transparent),
+                    radial-gradient(0.8px 0.8px at 33% 58%, rgba(255,255,255,0.46), transparent),
+                    radial-gradient(1.5px 1.5px at 41% 9%, rgba(255,255,255,0.9), transparent),
+                    radial-gradient(0.7px 0.7px at 48% 42%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 56% 86%, rgba(255,255,255,0.58), transparent),
+                    radial-gradient(0.8px 0.8px at 63% 28%, rgba(255,255,255,0.44), transparent),
+                    radial-gradient(1.8px 1.8px at 71% 68%, rgba(255,255,255,0.96), transparent),
+                    radial-gradient(0.7px 0.7px at 79% 15%, rgba(255,255,255,0.36), transparent),
+                    radial-gradient(1.1px 1.1px at 86% 47%, rgba(255,255,255,0.63), transparent),
+                    radial-gradient(0.8px 0.8px at 94% 82%, rgba(255,255,255,0.45), transparent),
+                    radial-gradient(1.3px 1.3px at 23% 49%, rgba(255,255,255,0.72), transparent),
+                    radial-gradient(0.6px 0.6px at 67% 94%, rgba(255,255,255,0.34), transparent),
+                    radial-gradient(0.7px 0.7px at 8% 52%, rgba(255,255,255,0.36), transparent),
+                    radial-gradient(0.9px 0.9px at 15% 7%, rgba(255,255,255,0.48), transparent),
+                    radial-gradient(1px 1px at 31% 88%, rgba(255,255,255,0.54), transparent),
+                    radial-gradient(0.6px 0.6px at 37% 34%, rgba(255,255,255,0.32), transparent),
+                    radial-gradient(1.1px 1.1px at 52% 63%, rgba(255,255,255,0.62), transparent),
+                    radial-gradient(0.8px 0.8px at 59% 5%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(0.7px 0.7px at 74% 39%, rgba(255,255,255,0.35), transparent),
+                    radial-gradient(1px 1px at 83% 91%, rgba(255,255,255,0.56), transparent),
+                    radial-gradient(0.6px 0.6px at 97% 20%, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(0.9px 0.9px at 5% 91%, rgba(255,255,255,0.42), transparent),
+                    radial-gradient(1.2px 1.2px at 18% 61%, rgba(255,255,255,0.67), transparent),
+                    radial-gradient(0.7px 0.7px at 44% 72%, rgba(255,255,255,0.36), transparent),
+                    radial-gradient(1px 1px at 68% 16%, rgba(255,255,255,0.5), transparent),
+                    radial-gradient(0.8px 0.8px at 81% 55%, rgba(255,255,255,0.43), transparent),
+                    radial-gradient(1.4px 1.4px at 96% 64%, rgba(255,255,255,0.75), transparent),
+                    radial-gradient(0.6px 0.6px at 3% 43%, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(0.7px 0.7px at 13% 25%, rgba(255,255,255,0.38), transparent),
+                    radial-gradient(0.8px 0.8px at 20% 87%, rgba(255,255,255,0.42), transparent),
+                    radial-gradient(0.6px 0.6px at 35% 6%, rgba(255,255,255,0.32), transparent),
+                    radial-gradient(0.9px 0.9px at 46% 53%, rgba(255,255,255,0.45), transparent),
+                    radial-gradient(0.7px 0.7px at 54% 18%, rgba(255,255,255,0.34), transparent),
+                    radial-gradient(0.8px 0.8px at 73% 84%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(0.6px 0.6px at 89% 73%, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(1px 1px at 99% 11%, rgba(255,255,255,0.5), transparent),
+                    radial-gradient(0.9px 0.9px at 7% 86%, rgba(255,255,255,0.42), transparent),
+                    radial-gradient(1.1px 1.1px at 24% 94%, rgba(255,255,255,0.58), transparent),
+                    radial-gradient(0.7px 0.7px at 43% 83%, rgba(255,255,255,0.34), transparent),
+                    radial-gradient(1.3px 1.3px at 61% 91%, rgba(255,255,255,0.7), transparent),
+                    radial-gradient(0.8px 0.8px at 79% 79%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 93% 96%, rgba(255,255,255,0.52), transparent);
+                background-size: 8% 50%;
+                background-repeat: repeat;
+                opacity: 0.72;
+            }
+
+            body::after {
+                background:
+                    radial-gradient(1px 1px at 8% 64%, rgba(255,255,255,0.52), transparent),
+                    radial-gradient(0.7px 0.7px at 16% 18%, rgba(255,255,255,0.35), transparent),
+                    radial-gradient(1.4px 1.4px at 38% 76%, rgba(255,255,255,0.78), transparent),
+                    radial-gradient(0.8px 0.8px at 52% 24%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1.1px 1.1px at 64% 52%, rgba(255,255,255,0.6), transparent),
+                    radial-gradient(0.7px 0.7px at 77% 88%, rgba(255,255,255,0.32), transparent),
+                    radial-gradient(1.6px 1.6px at 91% 31%, rgba(255,255,255,0.86), transparent),
+                    radial-gradient(0.8px 0.8px at 24% 12%, rgba(255,255,255,0.38), transparent),
+                    radial-gradient(1px 1px at 47% 92%, rgba(255,255,255,0.52), transparent),
+                    radial-gradient(0.7px 0.7px at 73% 70%, rgba(255,255,255,0.34), transparent),
+                    radial-gradient(1.2px 1.2px at 87% 8%, rgba(255,255,255,0.66), transparent),
+                    radial-gradient(0.9px 0.9px at 12% 42%, rgba(255,255,255,0.44), transparent),
+                    radial-gradient(1.3px 1.3px at 29% 93%, rgba(255,255,255,0.7), transparent),
+                    radial-gradient(0.8px 0.8px at 57% 41%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(1px 1px at 69% 6%, rgba(255,255,255,0.5), transparent),
+                    radial-gradient(0.7px 0.7px at 14% 76%, rgba(255,255,255,0.32), transparent),
+                    radial-gradient(1px 1px at 50% 88%, rgba(255,255,255,0.48), transparent),
+                    radial-gradient(1.2px 1.2px at 88% 82%, rgba(255,255,255,0.62), transparent),
+                    radial-gradient(0.6px 0.6px at 4% 9%, rgba(255,255,255,0.3), transparent),
+                    radial-gradient(0.8px 0.8px at 22% 35%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(0.7px 0.7px at 33% 15%, rgba(255,255,255,0.34), transparent),
+                    radial-gradient(0.9px 0.9px at 42% 61%, rgba(255,255,255,0.46), transparent),
+                    radial-gradient(0.6px 0.6px at 58% 80%, rgba(255,255,255,0.32), transparent),
+                    radial-gradient(0.8px 0.8px at 76% 29%, rgba(255,255,255,0.4), transparent),
+                    radial-gradient(0.7px 0.7px at 83% 49%, rgba(255,255,255,0.35), transparent),
+                    radial-gradient(0.9px 0.9px at 98% 93%, rgba(255,255,255,0.44), transparent);
+                background-size: 50% 50%;
+                background-repeat: repeat;
+                opacity: 0.5;
+            }
+
+            main {
+                position: relative;
+                z-index: 1;
+            }
+
+            .header-container {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 64px 24px 0;
+                text-align: center;
+            }
+
+            .underlined-heading {
+                margin: 26px 0 0;
+                color: var(--text);
+                font-family: Georgia, serif;
+                font-size: clamp(2.4rem, 7vw, 4.2rem);
+                font-weight: normal;
+                letter-spacing: 0.035em;
+                text-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
+            }
+
+            .underlined-heading::after {
+                content: "";
+                display: block;
+                width: 56px;
+                height: 2px;
+                margin: 18px auto 0;
+                background: var(--accent);
+            }
+
+            .header-prompt {
+                margin: 16px 0 0;
+                color: var(--muted);
+                font-size: 0.9rem;
+                letter-spacing: 0.03em;
+            }
+
+            .content-container {
+                max-width: 760px;
+                margin: 64px auto 0;
+                padding: 0 24px 56px;
+            }
+
+            .link-groups {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 22px 48px;
+                counter-reset: section-counter;
+            }
+
+            .link-group {
+                position: relative;
+                border-top: 1px solid var(--surface-line);
+                padding-top: 16px;
+                counter-increment: section-counter;
+            }
+
+            .link-group::after {
+                content: "";
+                position: absolute;
+                top: -1px;
+                right: 0;
+                width: 34px;
+                border-top: 1px solid var(--accent);
+            }
+
+            .link-group h2 {
+                margin: 0 0 11px;
+                color: var(--muted);
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                font-size: 0.7rem;
+                font-weight: normal;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .link-group h2::before {
+                content: counter(section-counter, decimal-leading-zero) " / ";
+                color: var(--accent);
+            }
+
+            .link-group ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .link-group li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            a {
+                display: block;
+                padding: 7px 0;
+                color: var(--link);
+                text-decoration-color: transparent;
+                text-underline-offset: 4px;
+                transition: color 160ms ease, text-decoration-color 160ms ease;
+            }
+
+            a:hover,
+            a:focus-visible {
+                color: var(--text);
+                text-decoration-color: var(--accent);
+            }
+
+            a:focus-visible {
+                outline: 1px solid var(--accent);
+                outline-offset: 4px;
+            }
+
+            @media (max-width: 600px) {
+                body::before,
+                body::after {
+                    position: fixed;
+                }
+
+                .header-container {
+                    padding-top: 28px;
+                }
+
+                .content-container {
+                    margin-top: 48px;
+                    padding: 0 18px 40px;
+                }
+
+                .link-groups {
+                    grid-template-columns: 1fr;
+                    gap: 18px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="starfield" aria-hidden="true"></canvas>
+        <main>
+            <div class="header-container">
+                <h1 class="underlined-heading">Index</h1>
+                <p class="header-prompt">What are you looking for?</p>
+            </div>
+
+            <div class="content-container">
+                <div class="link-groups">
+                    <section class="link-group">
+                        <h2>Science</h2>
+                        <ul>
+                            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">www.nasa.gov</a></li>
+                            <li><a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">www.mit.edu</a></li>
+                            <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">www.khanacademy.org</a></li>
+                            <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Writing</h2>
+                        <ul>
+                            <li><a href="https://typst.app/docs/" target="_blank" rel="noopener noreferrer">typst.app/docs</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Social Media</h2>
+                        <ul>
+                            <li><a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">mail.google.com</a></li>
+                            <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">discord.com</a></li>
+                            <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">web.whatsapp.com</a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">www.instagram.com</a></li>
+                            <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">x.com</a></li>
+                            <li><a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">www.reddit.com</a></li>
+                            <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">www.pinterest.com</a></li>
+                            <li><a href="https://stackexchange.com/" target="_blank" rel="noopener noreferrer">stackexchange.com</a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">www.facebook.com</a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">www.linkedin.com</a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">www.youtube.com</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Archive</h2>
+                        <ul>
+                            <li><a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">drive.google.com</a></li>
+                            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+        </main>
+
+        <script>
+            const starfield = document.querySelector("#starfield");
+            const starContext = starfield.getContext("2d");
+            let starSeed = crypto.getRandomValues(new Uint32Array(1))[0];
+
+            function randomValue() {
+                starSeed = (starSeed * 1664525 + 1013904223) >>> 0;
+                return starSeed / 4294967296;
+            }
+
+            function drawStarfield() {
+                const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+                const width = document.documentElement.clientWidth;
+                const height = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+                const starCount = Math.round((width * height) / 1800);
+
+                starfield.style.width = `${width}px`;
+                starfield.style.height = `${height}px`;
+                starfield.width = width * pixelRatio;
+                starfield.height = height * pixelRatio;
+                starContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+                starContext.clearRect(0, 0, width, height);
+
+                for (let index = 0; index < starCount; index += 1) {
+                    const x = randomValue() * width;
+                    const y = randomValue() * height;
+                    const luminosity = Math.pow(randomValue(), 2.8);
+                    const radius = 0.25 + luminosity * 1.35;
+                    const brightness = 0.1 + luminosity * 0.58;
+                    const temperature = randomValue();
+                    const color = temperature < 0.16
+                        ? `rgba(190, 215, 255, ${brightness})`
+                        : temperature > 0.86
+                            ? `rgba(255, 235, 205, ${brightness})`
+                            : `rgba(255, 255, 255, ${brightness})`;
+
+                    if (radius > 1.25) {
+                        starContext.shadowBlur = radius * 3;
+                        starContext.shadowColor = color;
+                    }
+
+                    starContext.beginPath();
+                    starContext.fillStyle = color;
+                    starContext.arc(x, y, radius, 0, Math.PI * 2);
+                    starContext.fill();
+                    starContext.shadowBlur = 0;
+                }
+            }
+
+            drawStarfield();
+        </script>
+    </body>
+</html>
