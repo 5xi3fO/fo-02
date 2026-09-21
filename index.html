@@ -170,6 +170,29 @@
                 letter-spacing: 0.03em;
             }
 
+            .link-search {
+                display: block;
+                width: min(100%, 360px);
+                margin: 24px auto 0;
+                padding: 10px 0;
+                border: 0;
+                border-bottom: 1px solid var(--surface-line);
+                background: transparent;
+                color: var(--text);
+                font: inherit;
+                text-align: center;
+                outline: none;
+            }
+
+            .link-search::placeholder {
+                color: var(--muted);
+                opacity: 0.75;
+            }
+
+            .link-search:focus {
+                border-bottom-color: var(--accent);
+            }
+
             .content-container {
                 max-width: 760px;
                 margin: 64px auto 0;
@@ -177,17 +200,20 @@
             }
 
             .link-groups {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 22px 48px;
+                column-count: 2;
+                column-gap: 48px;
                 counter-reset: section-counter;
             }
 
             .link-group {
                 position: relative;
+                display: inline-block;
+                width: 100%;
+                margin: 0 0 22px;
                 border-top: 1px solid var(--surface-line);
                 padding-top: 16px;
                 counter-increment: section-counter;
+                break-inside: avoid;
             }
 
             .link-group::after {
@@ -260,8 +286,7 @@
                 }
 
                 .link-groups {
-                    grid-template-columns: 1fr;
-                    gap: 18px;
+                    column-count: 1;
                 }
             }
         </style>
@@ -273,24 +298,103 @@
             <div class="header-container">
                 <h1 class="underlined-heading">Index</h1>
                 <p class="header-prompt">What are you looking for?</p>
+                <input class="link-search" id="link-search" type="search" placeholder="Search links" aria-label="Search links">
             </div>
 
             <div class="content-container">
                 <div class="link-groups">
                     <section class="link-group">
-                        <h2>Science</h2>
+                        <h2>Islam</h2>
                         <ul>
-                            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">www.nasa.gov</a></li>
-                            <li><a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">www.mit.edu</a></li>
-                            <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">www.khanacademy.org</a></li>
-                            <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+                            <li><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">quran.com</a></li>
+                            <li><a href="https://www.islamicfinder.org/" target="_blank" rel="noopener noreferrer">islamicfinder.org</a></li>
                         </ul>
                     </section>
 
                     <section class="link-group">
-                        <h2>Writing</h2>
+                        <h2>STEM</h2>
                         <ul>
-                            <li><a href="https://typst.app/docs/" target="_blank" rel="noopener noreferrer">typst.app/docs</a></li>
+                            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">www.nasa.gov</a></li>
+                            <li><a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">www.mit.edu</a></li>
+                            <li><a href="https://phet.colorado.edu/" target="_blank" rel="noopener noreferrer">phet.colorado.edu</a></li>
+                            <li><a href="https://ptable.com/" target="_blank" rel="noopener noreferrer">ptable.com</a></li>
+                            <li><a href="https://www.spacex.com/" target="_blank" rel="noopener noreferrer">spacex.com</a></li>
+                            <li><a href="https://www.ibm.com/" target="_blank" rel="noopener noreferrer">ibm.com</a></li>
+                            <li><a href="https://www.nvidia.com/" target="_blank" rel="noopener noreferrer">nvidia.com</a></li>
+                            <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">www.khanacademy.org</a></li>
+                            <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
+                            <li><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">scholar.google.com</a></li>
+                            <li><a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">researchgate.net</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Programming</h2>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+                            <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">stackoverflow.com</a></li>
+                            <li><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">python.org</a></li>
+                            <li><a href="https://www.tinkercad.com/" target="_blank" rel="noopener noreferrer">tinkercad.com</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Academics</h2>
+                        <ul>
+                            <li><a href="https://www.kaust.edu.sa/" target="_blank" rel="noopener noreferrer">kaust.edu.sa</a></li>
+                            <li><a href="https://igracias.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">igracias.telkomuniversity.ac.id</a></li>
+                            <li><a href="https://lms.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">lms.telkomuniversity.ac.id</a></li>
+                            <li><a href="https://studyinsaudi.moe.gov.sa/" target="_blank" rel="noopener noreferrer">studyinsaudi.moe.gov.sa</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Non-Academics</h2>
+                        <ul>
+                            <li><a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">wikipedia.org</a></li>
+                            <li><a href="https://www.ted.com/" target="_blank" rel="noopener noreferrer">ted.com</a></li>
+                            <li><a href="https://www.gulftalent.com/" target="_blank" rel="noopener noreferrer">gulftalent.com</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Languages</h2>
+                        <ul>
+                            <li><a href="https://translate.google.com/?sl=en&amp;tl=id&amp;op=translate" target="_blank" rel="noopener noreferrer">translate.google.com/?sl=en&amp;tl=id&amp;op=translate</a></li>
+                            <li><a href="https://www.merriam-webster.com/" target="_blank" rel="noopener noreferrer">www.merriam-webster.com</a></li>
+                            <li><a href="https://translate.google.com/?sl=en&amp;tl=ar&amp;op=translate" target="_blank" rel="noopener noreferrer">translate.google.com/?sl=en&amp;tl=ar&amp;op=translate</a></li>
+                            <li><a href="https://translate.google.com/?sl=en&amp;tl=ja&amp;op=translate" target="_blank" rel="noopener noreferrer">translate.google.com/?sl=en&amp;tl=ja&amp;op=translate</a></li>
+                            <li><a href="https://translate.google.com/?sl=en&amp;tl=zh-CN&amp;op=translate" target="_blank" rel="noopener noreferrer">translate.google.com/?sl=en&amp;tl=zh-CN&amp;op=translate</a></li>
+                            <li><a href="https://translate.google.com/?sl=en&amp;tl=zh-TW&amp;op=translate" target="_blank" rel="noopener noreferrer">translate.google.com/?sl=en&amp;tl=zh-TW&amp;op=translate</a></li>
+                            <li><a href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer">duolingo.com</a></li>
+                            <li><a href="https://www.deepl.com/translator" target="_blank" rel="noopener noreferrer">deepl.com/translator</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Maps &amp; Places</h2>
+                        <ul>
+                            <li><a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">maps.google.com</a></li>
+                            <li><a href="https://earth.google.com/" target="_blank" rel="noopener noreferrer">earth.google.com</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>Search Engines</h2>
+                        <ul>
+                            <li><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">google.com</a></li>
+                            <li><a href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">bing.com</a></li>
+                            <li><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">duckduckgo.com</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="link-group">
+                        <h2>AI</h2>
+                        <ul>
+                            <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a></li>
+                            <li><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai</a></li>
+                            <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
+                            <li><a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">deepseek.com</a></li>
                         </ul>
                     </section>
 
@@ -308,12 +412,15 @@
                             <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">www.facebook.com</a></li>
                             <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">www.linkedin.com</a></li>
                             <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">www.youtube.com</a></li>
+                            <li><a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">www.quora.com</a></li>
                         </ul>
                     </section>
 
                     <section class="link-group">
-                        <h2>Archive</h2>
+                        <h2>Tools</h2>
                         <ul>
+                            <li><a href="https://typst.app/docs/" target="_blank" rel="noopener noreferrer">typst.app/docs</a></li>
+                            <li><a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer">monkeytype.com</a></li>
                             <li><a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">drive.google.com</a></li>
                             <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com</a></li>
                         </ul>
@@ -373,6 +480,18 @@
             }
 
             drawStarfield();
+
+            const linkSearch = document.querySelector("#link-search");
+            const linkGroups = document.querySelectorAll(".link-group");
+
+            linkSearch.addEventListener("input", () => {
+                const query = linkSearch.value.trim().toLowerCase();
+
+                linkGroups.forEach((group) => {
+                    const groupText = group.textContent.toLowerCase();
+                    group.hidden = query.length > 0 && !groupText.includes(query);
+                });
+            });
         </script>
     </body>
 </html>
