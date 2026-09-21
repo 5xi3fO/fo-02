@@ -170,29 +170,6 @@
                 letter-spacing: 0.03em;
             }
 
-            .link-search {
-                display: block;
-                width: min(100%, 360px);
-                margin: 24px auto 0;
-                padding: 10px 0;
-                border: 0;
-                border-bottom: 1px solid var(--surface-line);
-                background: transparent;
-                color: var(--text);
-                font: inherit;
-                text-align: center;
-                outline: none;
-            }
-
-            .link-search::placeholder {
-                color: var(--muted);
-                opacity: 0.75;
-            }
-
-            .link-search:focus {
-                border-bottom-color: var(--accent);
-            }
-
             .content-container {
                 max-width: 760px;
                 margin: 64px auto 0;
@@ -298,7 +275,6 @@
             <div class="header-container">
                 <h1 class="underlined-heading">Index</h1>
                 <p class="header-prompt">What are you looking for?</p>
-                <input class="link-search" id="link-search" type="search" placeholder="Search links" aria-label="Search links">
             </div>
 
             <div class="content-container">
@@ -480,18 +456,6 @@
             }
 
             drawStarfield();
-
-            const linkSearch = document.querySelector("#link-search");
-            const linkGroups = document.querySelectorAll(".link-group");
-
-            linkSearch.addEventListener("input", () => {
-                const query = linkSearch.value.trim().toLowerCase();
-
-                linkGroups.forEach((group) => {
-                    const groupText = group.textContent.toLowerCase();
-                    group.hidden = query.length > 0 && !groupText.includes(query);
-                });
-            });
         </script>
     </body>
 </html>
