@@ -27,8 +27,8 @@
                 background: #080808;
                 color: var(--text);
                 font-family: Georgia, serif;
-                font-size: 18px;
-                line-height: 1.55;
+                font-size: 17px;
+                line-height: 1.5;
                 overflow-x: hidden;
             }
 
@@ -177,16 +177,18 @@
             }
 
             .link-groups {
-                column-count: 4;
-                column-gap: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
                 counter-reset: section-counter;
             }
 
             .link-group {
                 position: relative;
-                display: inline-block;
-                width: 100%;
-                margin: 0 0 12px;
+                flex: 1 1 0;
+                min-width: 0;
+                margin: 0;
                 border-top: 1px solid var(--surface-line);
                 padding-top: 9px;
                 counter-increment: section-counter;
@@ -206,7 +208,7 @@
                 margin: 0 0 5px;
                 color: var(--muted);
                 font-family: "Helvetica Neue", Arial, sans-serif;
-                font-size: 0.66rem;
+                font-size: 0.62rem;
                 font-weight: normal;
                 letter-spacing: 0.12em;
                 text-transform: uppercase;
@@ -231,7 +233,7 @@
                 display: block;
                 padding: 3px 0;
                 color: var(--link);
-                font-size: 0.9rem;
+                font-size: 0.82rem;
                 text-decoration-color: transparent;
                 text-underline-offset: 4px;
                 transition: color 160ms ease, text-decoration-color 160ms ease;
@@ -264,7 +266,13 @@
                 }
 
                 .link-groups {
-                    column-count: 1;
+                    display: block;
+                }
+
+                .link-group {
+                    display: block;
+                    width: 100%;
+                    margin: 0 0 12px;
                 }
             }
         </style>
