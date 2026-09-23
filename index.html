@@ -177,16 +177,18 @@
             }
 
             .link-groups {
-                column-count: 4;
-                column-gap: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 24px;
                 counter-reset: section-counter;
             }
 
             .link-group {
                 position: relative;
-                display: inline-block;
-                width: 100%;
-                margin: 0 0 12px;
+                flex: 1 1 0;
+                min-width: 0;
+                margin: 0;
                 border-top: 1px solid var(--surface-line);
                 padding-top: 9px;
                 counter-increment: section-counter;
@@ -264,7 +266,13 @@
                 }
 
                 .link-groups {
-                    column-count: 1;
+                    display: block;
+                }
+
+                .link-group {
+                    display: block;
+                    width: 100%;
+                    margin: 0 0 12px;
                 }
             }
         </style>
@@ -285,107 +293,75 @@
                             <li><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">quran.com</a></li>
                             <li><a href="https://sunnah.com/" target="_blank" rel="noopener noreferrer">sunnah.com</a></li>
                             <li><a href="https://99namesofallah.name/" target="_blank" rel="noopener noreferrer">The 99 Names of Allah</a></li>
-                            <li><a href="https://sunnah.com/bukhari:1166" target="_blank" rel="noopener noreferrer">sunnah.com/bukhari:1166</a></li>
+                            <li><a href="https://quran.com/21/87" target="_blank" rel="noopener noreferrer">quran.com/21/87</a></li>
+                            <li><a href="https://quran.com/7/23" target="_blank" rel="noopener noreferrer">quran.com/7/23</a></li>
+                            <li><a href="https://quran.com/28/24" target="_blank" rel="noopener noreferrer">quran.com/28/24</a></li>
+                            <li><a href="https://quran.com/2/255" target="_blank" rel="noopener noreferrer">quran.com/2/255</a></li>
+                            <li><a href="https://quran.com/18/1-10" target="_blank" rel="noopener noreferrer">quran.com/18/1-10</a></li>
+                            <li><a href="https://quran.com/67" target="_blank" rel="noopener noreferrer">quran.com/67</a></li>
+                            <li><a href="https://sunnah.com/bukhari:6502" target="_blank" rel="noopener noreferrer">sunnah.com/bukhari:6502</a></li>
+                            <li><a href="https://sunnah.com/muslim:1015" target="_blank" rel="noopener noreferrer">sunnah.com/muslim:1015</a></li>
+                            <li><a href="https://sunnah.com/tirmidhi:3505" target="_blank" rel="noopener noreferrer">sunnah.com/tirmidhi:3505</a></li>
+                            <li><a href="https://sunnah.com/ibnmajah:925" target="_blank" rel="noopener noreferrer">sunnah.com/ibnmajah:925</a></li>
                         </ul>
                     </section>
 
                     <section class="link-group">
-                        <h2>STEM</h2>
+                        <h2>Science</h2>
                         <ul>
-                            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">www.nasa.gov</a></li>
-                            <li><a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">www.mit.edu</a></li>
+                            <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">www.khanacademy.org</a></li>
                             <li><a href="https://phet.colorado.edu/" target="_blank" rel="noopener noreferrer">phet.colorado.edu</a></li>
                             <li><a href="https://ptable.com/" target="_blank" rel="noopener noreferrer">ptable.com</a></li>
-                            <li><a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">www.khanacademy.org</a></li>
-                            <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arxiv.org</a></li>
-                            <li><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">scholar.google.com</a></li>
-                            <li><a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">www.researchgate.net</a></li>
-                            <li><a href="https://www.tinkercad.com/" target="_blank" rel="noopener noreferrer">www.tinkercad.com</a></li>
-                            <li><a href="https://typst.app/docs/" target="_blank" rel="noopener noreferrer">typst.app/docs</a></li>
-                            <li><a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">www.wikipedia.org</a></li>
                         </ul>
                     </section>
-
+                    
                     <section class="link-group">
-                        <h2>Academics</h2>
-                        <ul>
-                            <li><a href="https://igracias.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">igracias.telkomuniversity.ac.id</a></li>
-                            <li><a href="https://lms.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">lms.telkomuniversity.ac.id</a></li>
-                            <li><a href="https://studyinsaudi.sa/en" target="_blank" rel="noopener noreferrer">studyinsaudi.sa/en</a></li>
-                            <li><a href="https://www.kaust.edu.sa/" target="_blank" rel="noopener noreferrer">www.kaust.edu.sa</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Non-Academics</h2>
-                        <ul>
-                            <li><a href="https://www.gulftalent.com/" target="_blank" rel="noopener noreferrer">www.gulftalent.com</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Search Engines</h2>
+                        <h2>Tools</h2>
                         <ul>
                             <li><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">www.google.com</a></li>
-                            <li><a href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">www.bing.com</a></li>
-                            <li><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">duckduckgo.com</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Time and Location</h2>
-                        <ul>
-                            <li><a href="https://earth.google.com/" target="_blank" rel="noopener noreferrer">earth.google.com</a></li>
-                            <li><a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">maps.google.com</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Languages</h2>
-                        <ul>
+                            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">www.youtube.com</a></li>
+                            <li><a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">www.wikipedia.org</a></li>
                             <li><a href="https://translate.google.com/?sl=en&amp;tl=id&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate: en-id</a></li>
                             <li><a href="https://www.merriam-webster.com/" target="_blank" rel="noopener noreferrer">www.merriam-webster.com</a></li>
                             <li><a href="https://translate.google.com/?sl=en&amp;tl=ar&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate: en-ar</a></li>
                             <li><a href="https://translate.google.com/?sl=en&amp;tl=zh-CN&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate: en-"zh-CN"</a></li>
                             <li><a href="https://translate.google.com/?sl=en&amp;tl=zh-TW&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate: en-"zh-TW"</a></li>
                             <li><a href="https://translate.google.com/?sl=en&amp;tl=ja&amp;op=translate" target="_blank" rel="noopener noreferrer">Google Translate: en-ja</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Tools</h2>
-                        <ul>
                             <li><a href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">drive.google.com</a></li>
                             <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com</a></li>
+                            <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
+                            <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a></li>
+                            <li><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai</a></li>
+                            <li><a href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">maps.google.com</a></li>
+                            <li><a href="https://earth.google.com/" target="_blank" rel="noopener noreferrer">earth.google.com</a></li>
+                            <li><a href="https://www.timeanddate.com/" target="_blank" rel="noopener noreferrer">www.timeanddate.com</a></li>
+                            <li><a href="https://typst.app/docs/" target="_blank" rel="noopener noreferrer">typst.app/docs</a></li>
+                            <li><a href="https://www.tinkercad.com/" target="_blank" rel="noopener noreferrer">www.tinkercad.com</a></li>
                             <li><a href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer">monkeytype.com</a></li>
                         </ul>
                     </section>
 
                     <section class="link-group">
-                        <h2>AI</h2>
-                        <ul>
-                            <li><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a></li>
-                            <li><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai</a></li>
-                            <li><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com</a></li>
-                            <li><a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">www.deepseek.com</a></li>
-                        </ul>
-                    </section>
-
-                    <section class="link-group">
-                        <h2>Social Media</h2>
+                        <h2>Miscellaneous</h2>
                         <ul>
                             <li><a href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">mail.google.com</a></li>
-                            <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">discord.com</a></li>
                             <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">web.whatsapp.com</a></li>
+                            <li><a href="https://discord.com/" target="_blank" rel="noopener noreferrer">discord.com</a></li>
+                            <li><a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">www.reddit.com</a></li>
+                            <li><a href="https://stackexchange.com/" target="_blank" rel="noopener noreferrer">stackexchange.com</a></li>
                             <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">www.instagram.com</a></li>
                             <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">x.com</a></li>
-                            <li><a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">www.reddit.com</a></li>
-                            <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">www.pinterest.com</a></li>
-                            <li><a href="https://stackexchange.com/" target="_blank" rel="noopener noreferrer">stackexchange.com</a></li>
                             <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">www.facebook.com</a></li>
-                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">www.linkedin.com</a></li>
-                            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">www.youtube.com</a></li>
                             <li><a href="https://www.quora.com/" target="_blank" rel="noopener noreferrer">www.quora.com</a></li>
+                            <li><a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">www.pinterest.com</a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">www.linkedin.com</a></li>
+                            <li><a href="https://igracias.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">igracias.telkomuniversity.ac.id</a></li>
+                            <li><a href="https://lms.telkomuniversity.ac.id/" target="_blank" rel="noopener noreferrer">lms.telkomuniversity.ac.id</a></li>
+                            <li><a href="https://studyinsaudi.sa/en" target="_blank" rel="noopener noreferrer">studyinsaudi.sa/en</a></li>
+                            <li><a href="https://www.kaust.edu.sa/" target="_blank" rel="noopener noreferrer">www.kaust.edu.sa</a></li>
+                            <li><a href="https://www.gulftalent.com/" target="_blank" rel="noopener noreferrer">www.gulftalent.com</a></li>
+                            <li><a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">www.mit.edu</a></li>
+                            <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener noreferrer">www.nasa.gov</a></li>
                         </ul>
                     </section>
                 </div>
