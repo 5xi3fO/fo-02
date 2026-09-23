@@ -177,20 +177,19 @@
             }
 
             .link-groups {
-                column-count: 4;
-                column-gap: 30px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 30px;
                 counter-reset: section-counter;
             }
 
             .link-group {
                 position: relative;
-                display: inline-block;
                 width: 100%;
                 margin: 0 0 12px;
                 border-top: 1px solid var(--surface-line);
                 padding-top: 9px;
                 counter-increment: section-counter;
-                break-inside: avoid;
             }
 
             .link-group::after {
